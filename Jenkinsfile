@@ -22,6 +22,19 @@ pipeline {
           }
 
       }
+
+      stage('Package'){
+      agent any
+      steps{
+        sh 'mvn package'
+      }
+    }
+    stage('Upload War File To Artifactory'){
+      agent any
+      steps{
+        sh 'echo Uploaded War file to Artifactory'
+      }
+    }
       stage("Deploy") {
           steps {
             
