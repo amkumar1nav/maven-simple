@@ -36,6 +36,13 @@ pipeline {
 
           }
 
+      stage('Upload War File To Artifactory'){
+      agent any
+      steps{
+        sh 'echo Uploaded War file to Artifactory'
+      }
+    }    
+
 
       }
 
