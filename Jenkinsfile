@@ -42,17 +42,8 @@ pipeline {
             sh "mvn clean install"
             
           }
-          post {
-              success {
-                  archiveArtifacts 'target/*.jar'
-              }
 
           }
-
-          
-
-
-      }
 
       }
    }
