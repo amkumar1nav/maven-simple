@@ -35,6 +35,13 @@ pipeline {
         sh 'echo Uploaded War file to Artifactory'
       }
     }
+
+    post {
+              success {
+                  archiveArtifacts 'target/*.jar'
+              }
+
+          }
       stage("Deploy") {
           steps {
             
